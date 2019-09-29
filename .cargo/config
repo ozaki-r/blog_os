@@ -1,5 +1,10 @@
 [build]
-target = "x86_64-blog_os.json"
+target = "riscv32imac-unknown-none-elf"
 
-[target.'cfg(target_os = "none")']
-runner = "bootimage runner"
+#[target.'cfg(target_os = "none")']
+#runner = "bootimage runner"
+#[target.riscv32imac-unknown-none-elf]
+runner = "qemu-system-riscv32 -nographic -machine sifive_u -kernel"
+rustflags = [
+  "-C", "link-arg=-Tlinker.ld",
+]
