@@ -1,11 +1,14 @@
 [package]
-name = "blog_os"
+name = "blog_os-riscv"
 version = "0.1.0"
-authors = ["Philipp Oppermann <dev@phil-opp.com>"]
+authors = [
+	"Ryota Ozaki <ozaki.ryota@gmail.com>",
+	"Philipp Oppermann <dev@phil-opp.com>"
+]
 edition = "2018"
 
 [dependencies]
-bootloader = "0.8.0"
+#bootloader = "0.8.0"
 volatile = "0.2.6"
 spin = "0.5.2"
 
